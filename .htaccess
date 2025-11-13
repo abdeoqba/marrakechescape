@@ -1,8 +1,6 @@
 Options +FollowSymlinks
 RewriteEngine on
 
-
-
 #public
 RewriteRule ^$ public/pages/home.php [L]
 RewriteRule ^home$ public/pages/home.php [L]

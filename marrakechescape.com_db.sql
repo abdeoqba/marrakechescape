@@ -1,4 +1,3 @@
-
       DROP DATABASE IF EXISTS `marrakechescape.com_db`;
       CREATE DATABASE IF NOT EXISTS `marrakechescape.com_db`
       CHARACTER SET utf8
@@ -55,7 +54,8 @@ CREATE TABLE IF NOT EXISTS `cg_history` (
 
 INSERT INTO `cg_history`(`id_user`, `id_obj`, `table`, `action`, `time`) VALUES(1,0,'','create_database',NOW());
 
-    CREATE TABLE IF NOT EXISTS `post_comment` (
+
+CREATE TABLE IF NOT EXISTS `post_comment` (
 `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ,
 `updated_at` DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP ,
 `deleted_at` DATETIME NULL ,
