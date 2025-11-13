@@ -1,0 +1,375 @@
+Options +FollowSymlinks
+RewriteEngine on
+
+
+
+#public
+RewriteRule ^$ public/pages/home.php [L]
+RewriteRule ^home$ public/pages/home.php [L]
+
+RewriteRule ^about$ public/pages/about.php [L]
+RewriteRule ^contact$ public/pages/contact.php [L]
+RewriteRule ^category$ public/pages/category.php [L]
+RewriteRule ^program$ public/pages/program.php [L]
+RewriteRule ^faq$ public/pages/faq.php [L]
+RewriteRule ^terms$ public/pages/terms.php [L]
+RewriteRule ^policy$ public/pages/policy.php [L]
+RewriteRule ^reviews$ public/pages/reviews.php [L]
+
+RewriteRule ^blog$ public/pages/blog.php [L]
+RewriteRule ^article$ public/pages/blog-single.php [L]
+
+#post_comment
+RewriteRule ^admin/post_comments$ source/view/dynamic/post_comment_view_list.php [L]
+RewriteRule ^admin/post_comments-page-([0-9]*)$ source/view/dynamic/post_comment_view_list.php?page=$1 [L]
+RewriteRule ^admin/post_comment-([0-9]*)$ source/view/dynamic/post_comment_view.php?id_post_comment=$1 [L]
+RewriteRule ^admin/post_comments-trash$ source/view/dynamic/post_comment_view_trash.php [L]
+RewriteRule ^admin/post_comments-trash-page-([0-9]*)$ source/view/dynamic/post_comment_view_trash.php?page=$1 [L]
+
+RewriteRule ^admin/post_comments-export$ source/controller/post_comment_controller_export.php [L]
+RewriteRule ^admin/post_comment-add$ source/controller/post_comment_controller_add.php [L]
+RewriteRule ^admin/post_comment-update$ source/controller/post_comment_controller_update.php [L]
+RewriteRule ^admin/post_comment-delete$ source/controller/post_comment_controller_delete.php [L]
+
+RewriteRule ^admin/post_comment-truncate$ source/controller/post_comment_controller_truncate.php [L]
+RewriteRule ^admin/post_comment-move-to-trash$ source/controller/post_comment_controller_move_to_trash.php [L]
+
+#trash
+RewriteRule ^admin/post_comment-empty-trash$ source/controller/post_comment_controller_empty_trash.php [L]
+RewriteRule ^admin/post_comment-restore$ source/controller/post_comment_controller_restore.php [L]
+RewriteRule ^admin/post_comment-restore-all$ source/controller/post_comment_controller_restore_all.php [L]
+
+
+#post_category_translation
+RewriteRule ^admin/post_category_translations$ source/view/dynamic/post_category_translation_view_list.php [L]
+RewriteRule ^admin/post_category_translations-page-([0-9]*)$ source/view/dynamic/post_category_translation_view_list.php?page=$1 [L]
+RewriteRule ^admin/post_category_translation-([0-9]*)$ source/view/dynamic/post_category_translation_view.php?id_post_category_translation=$1 [L]
+RewriteRule ^admin/post_category_translations-trash$ source/view/dynamic/post_category_translation_view_trash.php [L]
+RewriteRule ^admin/post_category_translations-trash-page-([0-9]*)$ source/view/dynamic/post_category_translation_view_trash.php?page=$1 [L]
+
+RewriteRule ^admin/post_category_translations-export$ source/controller/post_category_translation_controller_export.php [L]
+RewriteRule ^admin/post_category_translation-add$ source/controller/post_category_translation_controller_add.php [L]
+RewriteRule ^admin/post_category_translation-update$ source/controller/post_category_translation_controller_update.php [L]
+RewriteRule ^admin/post_category_translation-delete$ source/controller/post_category_translation_controller_delete.php [L]
+
+RewriteRule ^admin/post_category_translation-truncate$ source/controller/post_category_translation_controller_truncate.php [L]
+RewriteRule ^admin/post_category_translation-move-to-trash$ source/controller/post_category_translation_controller_move_to_trash.php [L]
+
+#trash
+RewriteRule ^admin/post_category_translation-empty-trash$ source/controller/post_category_translation_controller_empty_trash.php [L]
+RewriteRule ^admin/post_category_translation-restore$ source/controller/post_category_translation_controller_restore.php [L]
+RewriteRule ^admin/post_category_translation-restore-all$ source/controller/post_category_translation_controller_restore_all.php [L]
+
+
+#post_category
+RewriteRule ^admin/post_categorys$ source/view/dynamic/post_category_view_list.php [L]
+RewriteRule ^admin/post_categorys-page-([0-9]*)$ source/view/dynamic/post_category_view_list.php?page=$1 [L]
+RewriteRule ^admin/post_category-([0-9]*)$ source/view/dynamic/post_category_view.php?id_post_category=$1 [L]
+RewriteRule ^admin/post_categorys-trash$ source/view/dynamic/post_category_view_trash.php [L]
+RewriteRule ^admin/post_categorys-trash-page-([0-9]*)$ source/view/dynamic/post_category_view_trash.php?page=$1 [L]
+
+RewriteRule ^admin/post_categorys-export$ source/controller/post_category_controller_export.php [L]
+RewriteRule ^admin/post_category-add$ source/controller/post_category_controller_add.php [L]
+RewriteRule ^admin/post_category-update$ source/controller/post_category_controller_update.php [L]
+RewriteRule ^admin/post_category-delete$ source/controller/post_category_controller_delete.php [L]
+
+RewriteRule ^admin/post_category-truncate$ source/controller/post_category_controller_truncate.php [L]
+RewriteRule ^admin/post_category-move-to-trash$ source/controller/post_category_controller_move_to_trash.php [L]
+
+#trash
+RewriteRule ^admin/post_category-empty-trash$ source/controller/post_category_controller_empty_trash.php [L]
+RewriteRule ^admin/post_category-restore$ source/controller/post_category_controller_restore.php [L]
+RewriteRule ^admin/post_category-restore-all$ source/controller/post_category_controller_restore_all.php [L]
+
+
+#post_translation
+RewriteRule ^admin/post_translations$ source/view/dynamic/post_translation_view_list.php [L]
+RewriteRule ^admin/post_translations-page-([0-9]*)$ source/view/dynamic/post_translation_view_list.php?page=$1 [L]
+RewriteRule ^admin/post_translation-([0-9]*)$ source/view/dynamic/post_translation_view.php?id_post_translation=$1 [L]
+RewriteRule ^admin/post_translations-trash$ source/view/dynamic/post_translation_view_trash.php [L]
+RewriteRule ^admin/post_translations-trash-page-([0-9]*)$ source/view/dynamic/post_translation_view_trash.php?page=$1 [L]
+
+RewriteRule ^admin/post_translations-export$ source/controller/post_translation_controller_export.php [L]
+RewriteRule ^admin/post_translation-add$ source/controller/post_translation_controller_add.php [L]
+RewriteRule ^admin/post_translation-update$ source/controller/post_translation_controller_update.php [L]
+RewriteRule ^admin/post_translation-delete$ source/controller/post_translation_controller_delete.php [L]
+
+RewriteRule ^admin/post_translation-truncate$ source/controller/post_translation_controller_truncate.php [L]
+RewriteRule ^admin/post_translation-move-to-trash$ source/controller/post_translation_controller_move_to_trash.php [L]
+
+#trash
+RewriteRule ^admin/post_translation-empty-trash$ source/controller/post_translation_controller_empty_trash.php [L]
+RewriteRule ^admin/post_translation-restore$ source/controller/post_translation_controller_restore.php [L]
+RewriteRule ^admin/post_translation-restore-all$ source/controller/post_translation_controller_restore_all.php [L]
+
+
+#payments
+RewriteRule ^admin/paymentss$ source/view/dynamic/payments_view_list.php [L]
+RewriteRule ^admin/paymentss-page-([0-9]*)$ source/view/dynamic/payments_view_list.php?page=$1 [L]
+RewriteRule ^admin/payments-([0-9]*)$ source/view/dynamic/payments_view.php?id_payments=$1 [L]
+RewriteRule ^admin/paymentss-trash$ source/view/dynamic/payments_view_trash.php [L]
+RewriteRule ^admin/paymentss-trash-page-([0-9]*)$ source/view/dynamic/payments_view_trash.php?page=$1 [L]
+
+RewriteRule ^admin/paymentss-export$ source/controller/payments_controller_export.php [L]
+RewriteRule ^admin/payments-add$ source/controller/payments_controller_add.php [L]
+RewriteRule ^admin/payments-update$ source/controller/payments_controller_update.php [L]
+RewriteRule ^admin/payments-delete$ source/controller/payments_controller_delete.php [L]
+
+RewriteRule ^admin/payments-truncate$ source/controller/payments_controller_truncate.php [L]
+RewriteRule ^admin/payments-move-to-trash$ source/controller/payments_controller_move_to_trash.php [L]
+
+#trash
+RewriteRule ^admin/payments-empty-trash$ source/controller/payments_controller_empty_trash.php [L]
+RewriteRule ^admin/payments-restore$ source/controller/payments_controller_restore.php [L]
+RewriteRule ^admin/payments-restore-all$ source/controller/payments_controller_restore_all.php [L]
+
+
+#bookings
+RewriteRule ^admin/bookingss$ source/view/dynamic/bookings_view_list.php [L]
+RewriteRule ^admin/bookingss-page-([0-9]*)$ source/view/dynamic/bookings_view_list.php?page=$1 [L]
+RewriteRule ^admin/bookings-([0-9]*)$ source/view/dynamic/bookings_view.php?id_bookings=$1 [L]
+RewriteRule ^admin/bookingss-trash$ source/view/dynamic/bookings_view_trash.php [L]
+RewriteRule ^admin/bookingss-trash-page-([0-9]*)$ source/view/dynamic/bookings_view_trash.php?page=$1 [L]
+
+RewriteRule ^admin/bookingss-export$ source/controller/bookings_controller_export.php [L]
+RewriteRule ^admin/bookings-add$ source/controller/bookings_controller_add.php [L]
+RewriteRule ^admin/bookings-update$ source/controller/bookings_controller_update.php [L]
+RewriteRule ^admin/bookings-delete$ source/controller/bookings_controller_delete.php [L]
+
+RewriteRule ^admin/bookings-truncate$ source/controller/bookings_controller_truncate.php [L]
+RewriteRule ^admin/bookings-move-to-trash$ source/controller/bookings_controller_move_to_trash.php [L]
+
+#trash
+RewriteRule ^admin/bookings-empty-trash$ source/controller/bookings_controller_empty_trash.php [L]
+RewriteRule ^admin/bookings-restore$ source/controller/bookings_controller_restore.php [L]
+RewriteRule ^admin/bookings-restore-all$ source/controller/bookings_controller_restore_all.php [L]
+
+
+#program_day_translation
+RewriteRule ^admin/program_day_translations$ source/view/dynamic/program_day_translation_view_list.php [L]
+RewriteRule ^admin/program_day_translations-page-([0-9]*)$ source/view/dynamic/program_day_translation_view_list.php?page=$1 [L]
+RewriteRule ^admin/program_day_translation-([0-9]*)$ source/view/dynamic/program_day_translation_view.php?id_program_day_translation=$1 [L]
+RewriteRule ^admin/program_day_translations-trash$ source/view/dynamic/program_day_translation_view_trash.php [L]
+RewriteRule ^admin/program_day_translations-trash-page-([0-9]*)$ source/view/dynamic/program_day_translation_view_trash.php?page=$1 [L]
+
+RewriteRule ^admin/program_day_translations-export$ source/controller/program_day_translation_controller_export.php [L]
+RewriteRule ^admin/program_day_translation-add$ source/controller/program_day_translation_controller_add.php [L]
+RewriteRule ^admin/program_day_translation-update$ source/controller/program_day_translation_controller_update.php [L]
+RewriteRule ^admin/program_day_translation-delete$ source/controller/program_day_translation_controller_delete.php [L]
+
+RewriteRule ^admin/program_day_translation-truncate$ source/controller/program_day_translation_controller_truncate.php [L]
+RewriteRule ^admin/program_day_translation-move-to-trash$ source/controller/program_day_translation_controller_move_to_trash.php [L]
+
+#trash
+RewriteRule ^admin/program_day_translation-empty-trash$ source/controller/program_day_translation_controller_empty_trash.php [L]
+RewriteRule ^admin/program_day_translation-restore$ source/controller/program_day_translation_controller_restore.php [L]
+RewriteRule ^admin/program_day_translation-restore-all$ source/controller/program_day_translation_controller_restore_all.php [L]
+
+
+#program_translation
+RewriteRule ^admin/program_translations$ source/view/dynamic/program_translation_view_list.php [L]
+RewriteRule ^admin/program_translations-page-([0-9]*)$ source/view/dynamic/program_translation_view_list.php?page=$1 [L]
+RewriteRule ^admin/program_translation-([0-9]*)$ source/view/dynamic/program_translation_view.php?id_program_translation=$1 [L]
+RewriteRule ^admin/program_translations-trash$ source/view/dynamic/program_translation_view_trash.php [L]
+RewriteRule ^admin/program_translations-trash-page-([0-9]*)$ source/view/dynamic/program_translation_view_trash.php?page=$1 [L]
+
+RewriteRule ^admin/program_translations-export$ source/controller/program_translation_controller_export.php [L]
+RewriteRule ^admin/program_translation-add$ source/controller/program_translation_controller_add.php [L]
+RewriteRule ^admin/program_translation-update$ source/controller/program_translation_controller_update.php [L]
+RewriteRule ^admin/program_translation-delete$ source/controller/program_translation_controller_delete.php [L]
+
+RewriteRule ^admin/program_translation-truncate$ source/controller/program_translation_controller_truncate.php [L]
+RewriteRule ^admin/program_translation-move-to-trash$ source/controller/program_translation_controller_move_to_trash.php [L]
+
+#trash
+RewriteRule ^admin/program_translation-empty-trash$ source/controller/program_translation_controller_empty_trash.php [L]
+RewriteRule ^admin/program_translation-restore$ source/controller/program_translation_controller_restore.php [L]
+RewriteRule ^admin/program_translation-restore-all$ source/controller/program_translation_controller_restore_all.php [L]
+
+
+#category_translation
+RewriteRule ^admin/category_translations$ source/view/dynamic/category_translation_view_list.php [L]
+RewriteRule ^admin/category_translations-page-([0-9]*)$ source/view/dynamic/category_translation_view_list.php?page=$1 [L]
+RewriteRule ^admin/category_translation-([0-9]*)$ source/view/dynamic/category_translation_view.php?id_category_translation=$1 [L]
+RewriteRule ^admin/category_translations-trash$ source/view/dynamic/category_translation_view_trash.php [L]
+RewriteRule ^admin/category_translations-trash-page-([0-9]*)$ source/view/dynamic/category_translation_view_trash.php?page=$1 [L]
+
+RewriteRule ^admin/category_translations-export$ source/controller/category_translation_controller_export.php [L]
+RewriteRule ^admin/category_translation-add$ source/controller/category_translation_controller_add.php [L]
+RewriteRule ^admin/category_translation-update$ source/controller/category_translation_controller_update.php [L]
+RewriteRule ^admin/category_translation-delete$ source/controller/category_translation_controller_delete.php [L]
+
+RewriteRule ^admin/category_translation-truncate$ source/controller/category_translation_controller_truncate.php [L]
+RewriteRule ^admin/category_translation-move-to-trash$ source/controller/category_translation_controller_move_to_trash.php [L]
+
+#trash
+RewriteRule ^admin/category_translation-empty-trash$ source/controller/category_translation_controller_empty_trash.php [L]
+RewriteRule ^admin/category_translation-restore$ source/controller/category_translation_controller_restore.php [L]
+RewriteRule ^admin/category_translation-restore-all$ source/controller/category_translation_controller_restore_all.php [L]
+
+
+#image
+RewriteRule ^admin/images$ source/view/dynamic/image_view_list.php [L]
+RewriteRule ^admin/images-page-([0-9]*)$ source/view/dynamic/image_view_list.php?page=$1 [L]
+RewriteRule ^admin/image-([0-9]*)$ source/view/dynamic/image_view.php?id_image=$1 [L]
+RewriteRule ^admin/images-trash$ source/view/dynamic/image_view_trash.php [L]
+RewriteRule ^admin/images-trash-page-([0-9]*)$ source/view/dynamic/image_view_trash.php?page=$1 [L]
+
+RewriteRule ^admin/images-export$ source/controller/image_controller_export.php [L]
+RewriteRule ^admin/image-add$ source/controller/image_controller_add.php [L]
+RewriteRule ^admin/image-update$ source/controller/image_controller_update.php [L]
+RewriteRule ^admin/image-delete$ source/controller/image_controller_delete.php [L]
+
+RewriteRule ^admin/image-truncate$ source/controller/image_controller_truncate.php [L]
+RewriteRule ^admin/image-move-to-trash$ source/controller/image_controller_move_to_trash.php [L]
+
+#trash
+RewriteRule ^admin/image-empty-trash$ source/controller/image_controller_empty_trash.php [L]
+RewriteRule ^admin/image-restore$ source/controller/image_controller_restore.php [L]
+RewriteRule ^admin/image-restore-all$ source/controller/image_controller_restore_all.php [L]
+
+
+#post
+RewriteRule ^admin/posts$ source/view/dynamic/post_view_list.php [L]
+RewriteRule ^admin/posts-page-([0-9]*)$ source/view/dynamic/post_view_list.php?page=$1 [L]
+RewriteRule ^admin/post-([0-9]*)$ source/view/dynamic/post_view.php?id_post=$1 [L]
+RewriteRule ^admin/posts-trash$ source/view/dynamic/post_view_trash.php [L]
+RewriteRule ^admin/posts-trash-page-([0-9]*)$ source/view/dynamic/post_view_trash.php?page=$1 [L]
+
+RewriteRule ^admin/posts-export$ source/controller/post_controller_export.php [L]
+RewriteRule ^admin/post-add$ source/controller/post_controller_add.php [L]
+RewriteRule ^admin/post-update$ source/controller/post_controller_update.php [L]
+RewriteRule ^admin/post-delete$ source/controller/post_controller_delete.php [L]
+
+RewriteRule ^admin/post-truncate$ source/controller/post_controller_truncate.php [L]
+RewriteRule ^admin/post-move-to-trash$ source/controller/post_controller_move_to_trash.php [L]
+
+#trash
+RewriteRule ^admin/post-empty-trash$ source/controller/post_controller_empty_trash.php [L]
+RewriteRule ^admin/post-restore$ source/controller/post_controller_restore.php [L]
+RewriteRule ^admin/post-restore-all$ source/controller/post_controller_restore_all.php [L]
+
+
+#client
+RewriteRule ^admin/clients$ source/view/dynamic/client_view_list.php [L]
+RewriteRule ^admin/clients-page-([0-9]*)$ source/view/dynamic/client_view_list.php?page=$1 [L]
+RewriteRule ^admin/client-([0-9]*)$ source/view/dynamic/client_view.php?id_client=$1 [L]
+RewriteRule ^admin/clients-trash$ source/view/dynamic/client_view_trash.php [L]
+RewriteRule ^admin/clients-trash-page-([0-9]*)$ source/view/dynamic/client_view_trash.php?page=$1 [L]
+
+RewriteRule ^admin/clients-export$ source/controller/client_controller_export.php [L]
+RewriteRule ^admin/client-add$ source/controller/client_controller_add.php [L]
+RewriteRule ^admin/client-update$ source/controller/client_controller_update.php [L]
+RewriteRule ^admin/client-delete$ source/controller/client_controller_delete.php [L]
+
+RewriteRule ^admin/client-truncate$ source/controller/client_controller_truncate.php [L]
+RewriteRule ^admin/client-move-to-trash$ source/controller/client_controller_move_to_trash.php [L]
+
+#trash
+RewriteRule ^admin/client-empty-trash$ source/controller/client_controller_empty_trash.php [L]
+RewriteRule ^admin/client-restore$ source/controller/client_controller_restore.php [L]
+RewriteRule ^admin/client-restore-all$ source/controller/client_controller_restore_all.php [L]
+
+
+#program_day
+RewriteRule ^admin/program_days$ source/view/dynamic/program_day_view_list.php [L]
+RewriteRule ^admin/program_days-page-([0-9]*)$ source/view/dynamic/program_day_view_list.php?page=$1 [L]
+RewriteRule ^admin/program_day-([0-9]*)$ source/view/dynamic/program_day_view.php?id_program_day=$1 [L]
+RewriteRule ^admin/program_days-trash$ source/view/dynamic/program_day_view_trash.php [L]
+RewriteRule ^admin/program_days-trash-page-([0-9]*)$ source/view/dynamic/program_day_view_trash.php?page=$1 [L]
+
+RewriteRule ^admin/program_days-export$ source/controller/program_day_controller_export.php [L]
+RewriteRule ^admin/program_day-add$ source/controller/program_day_controller_add.php [L]
+RewriteRule ^admin/program_day-update$ source/controller/program_day_controller_update.php [L]
+RewriteRule ^admin/program_day-delete$ source/controller/program_day_controller_delete.php [L]
+
+RewriteRule ^admin/program_day-truncate$ source/controller/program_day_controller_truncate.php [L]
+RewriteRule ^admin/program_day-move-to-trash$ source/controller/program_day_controller_move_to_trash.php [L]
+
+#trash
+RewriteRule ^admin/program_day-empty-trash$ source/controller/program_day_controller_empty_trash.php [L]
+RewriteRule ^admin/program_day-restore$ source/controller/program_day_controller_restore.php [L]
+RewriteRule ^admin/program_day-restore-all$ source/controller/program_day_controller_restore_all.php [L]
+
+
+#category
+RewriteRule ^admin/categorys$ source/view/dynamic/category_view_list.php [L]
+RewriteRule ^admin/categorys-page-([0-9]*)$ source/view/dynamic/category_view_list.php?page=$1 [L]
+RewriteRule ^admin/category-([0-9]*)$ source/view/dynamic/category_view.php?id_category=$1 [L]
+RewriteRule ^admin/categorys-trash$ source/view/dynamic/category_view_trash.php [L]
+RewriteRule ^admin/categorys-trash-page-([0-9]*)$ source/view/dynamic/category_view_trash.php?page=$1 [L]
+
+RewriteRule ^admin/categorys-export$ source/controller/category_controller_export.php [L]
+RewriteRule ^admin/category-add$ source/controller/category_controller_add.php [L]
+RewriteRule ^admin/category-update$ source/controller/category_controller_update.php [L]
+RewriteRule ^admin/category-delete$ source/controller/category_controller_delete.php [L]
+
+RewriteRule ^admin/category-truncate$ source/controller/category_controller_truncate.php [L]
+RewriteRule ^admin/category-move-to-trash$ source/controller/category_controller_move_to_trash.php [L]
+
+#trash
+RewriteRule ^admin/category-empty-trash$ source/controller/category_controller_empty_trash.php [L]
+RewriteRule ^admin/category-restore$ source/controller/category_controller_restore.php [L]
+RewriteRule ^admin/category-restore-all$ source/controller/category_controller_restore_all.php [L]
+
+
+#program
+RewriteRule ^admin/programs$ source/view/dynamic/program_view_list.php [L]
+RewriteRule ^admin/programs-page-([0-9]*)$ source/view/dynamic/program_view_list.php?page=$1 [L]
+RewriteRule ^admin/program-([0-9]*)$ source/view/dynamic/program_view.php?id_program=$1 [L]
+RewriteRule ^admin/programs-trash$ source/view/dynamic/program_view_trash.php [L]
+RewriteRule ^admin/programs-trash-page-([0-9]*)$ source/view/dynamic/program_view_trash.php?page=$1 [L]
+
+RewriteRule ^admin/programs-export$ source/controller/program_controller_export.php [L]
+RewriteRule ^admin/program-add$ source/controller/program_controller_add.php [L]
+RewriteRule ^admin/program-update$ source/controller/program_controller_update.php [L]
+RewriteRule ^admin/program-delete$ source/controller/program_controller_delete.php [L]
+
+RewriteRule ^admin/program-truncate$ source/controller/program_controller_truncate.php [L]
+RewriteRule ^admin/program-move-to-trash$ source/controller/program_controller_move_to_trash.php [L]
+
+#trash
+RewriteRule ^admin/program-empty-trash$ source/controller/program_controller_empty_trash.php [L]
+RewriteRule ^admin/program-restore$ source/controller/program_controller_restore.php [L]
+RewriteRule ^admin/program-restore-all$ source/controller/program_controller_restore_all.php [L]
+
+#home
+RewriteRule ^admin/$ source/view/dynamic/home.php [L]
+
+#setting
+RewriteRule ^admin/settings$ source/view/dynamic/cg_setting_main.php?s=edit_profile [L]
+RewriteRule ^admin/edit-profile$ source/view/dynamic/cg_setting_main.php?s=edit_profile [L]
+RewriteRule ^admin/change-password$ source/view/dynamic/cg_setting_main.php?s=change_password [L]
+RewriteRule ^admin/reset$ source/view/dynamic/cg_setting_main.php?s=truncate [L]
+
+#login
+RewriteRule ^admin/login$ source/view/static/admin_login.php [L]
+RewriteRule ^admin/logout$ source/controller/admin_logout.php [L]
+RewriteRule ^admin/config$ source/controller/admin_config.php [L]
+
+#cg_user
+RewriteRule ^admin/users$ source/view/dynamic/cg_user_view_list.php [L]
+RewriteRule ^admin/users-page-([0-9]*)$ source/view/dynamic/cg_user_view_list.php?page=$1 [L]
+RewriteRule ^admin/cg_user-([0-9]*)$ source/view/dynamic/cg_user_view.php?id_user=$1 [L]
+RewriteRule ^admin/users-trash$ source/view/dynamic/cg_user_view_trash.php [L]
+RewriteRule ^admin/users-trash-page-([0-9]*)$ source/view/dynamic/cg_user_view_trash.php?page=$1 [L]
+
+RewriteRule ^admin/cg_user-add$ source/controller/cg_user_controller_add.php [L]
+RewriteRule ^admin/cg_user-update$ source/controller/cg_user_controller_update.php [L]
+RewriteRule ^admin/cg_user-delete$ source/controller/cg_user_controller_delete.php [L]
+
+RewriteRule ^admin/cg_user-truncate$ source/controller/cg_user_controller_truncate.php [L]
+RewriteRule ^admin/cg_user-move-to-trash$ source/controller/cg_user_controller_move_to_trash.php [L]
+RewriteRule ^admin/cg_user-edit-profile$ source/controller/cg_user_controller_edit_profile.php [L]
+RewriteRule ^admin/cg_user-change-password$ source/controller/cg_user_controller_change_password.php [L]
+
+#trash
+RewriteRule ^admin/cg_user-empty-trash$ source/controller/cg_user_controller_empty_trash.php [L]
+RewriteRule ^admin/cg_user-restore$ source/controller/cg_user_controller_restore.php [L]
+RewriteRule ^admin/cg_user-restore-all$ source/controller/cg_user_controller_restore_all.php [L]
+
+#history
+RewriteRule ^admin/history$ source/view/dynamic/cg_history_view_list.php [L]
+RewriteRule ^admin/history-page-([0-9]*)$ source/view/dynamic/cg_history_view_list.php?page=$1 [L]
+
+RewriteRule ^admin/create-database$ source/controller/admin_execute_sql_db.php [L]
