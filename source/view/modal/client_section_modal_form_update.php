@@ -10,14 +10,9 @@
             </div>
             <div class="modal-body"><input type="hidden" name="id_client" id="client_update_id_client" >
                 <div class="form-group">
-                  <label for="client_update_first_name">First Name</label>
+                  <label for="client_update_full_name">Full Name</label>
                   <small></small>
-                  <input type="text" class="form-control" id="client_update_first_name" name="first_name" >
-                </div>
-                <div class="form-group">
-                  <label for="client_update_last_name">Last Name</label>
-                  <small></small>
-                  <input type="text" class="form-control" id="client_update_last_name" name="last_name" >
+                  <input type="text" class="form-control" id="client_update_full_name" name="full_name" >
                 </div>
                 <div class="form-group">
                   <label for="client_update_email">Email</label>
@@ -28,6 +23,28 @@
                   <label for="client_update_phone">Phone</label>
                   <small></small>
                   <input type="text" class="form-control" id="client_update_phone" name="phone" >
+                </div>
+                <div class="form-group">
+                  <label for="client_update_country">Country</label>
+                  <small></small>
+                  <input type="text" class="form-control" id="client_update_country" name="country" >
+                </div>
+                <div class="form-group">
+                  <label for="client_update_program">Program</label>
+                  <small></small>
+                  <input type="text" class="form-control" id="client_update_program" name="program" >
+                </div>
+                <div class="form-group">
+                  <label for="client_update_id_program">Program</label>
+                  <small></small>
+                  <input type="text" class="form-control" id="client_update_id_program" name="id_program" >
+                </div>
+                <div class="form-group">
+                  <label for="client_update_message">Message</label>
+                  <small></small>
+                  
+                        <textarea class="form-control" rows="5" name="message" id="client_update_message"></textarea>
+                      
                 </div>
             </div>
             <div class="modal-footer">
@@ -46,17 +63,26 @@
           
           $("#client_update_id_client").val(id_client);
               
-          let first_name = $("#first_name_"+id_client).text();
-          $("#client_update_first_name").val(first_name);
-              
-          let last_name = $("#last_name_"+id_client).text();
-          $("#client_update_last_name").val(last_name);
+          let full_name = $("#full_name_"+id_client).text();
+          $("#client_update_full_name").val(full_name);
               
           let email = $("#email_"+id_client).text();
           $("#client_update_email").val(email);
               
           let phone = $("#phone_"+id_client).text();
           $("#client_update_phone").val(phone);
+              
+          let country = $("#country_"+id_client).text();
+          $("#client_update_country").val(country);
+              
+          let program = $("#program_"+id_client).text();
+          $("#client_update_program").val(program);
+              
+          let id_program = $("#id_program_"+id_client).text();
+          $("#client_update_id_program").val(id_program);
+              
+          let message = $("#message_"+id_client).text();
+          $("#client_update_message").val(message);
               $(".client-"+id_client+" .list-group-item").addClass(card_hover_class);
 
           $("#ClientUpdateModal").modal("show");

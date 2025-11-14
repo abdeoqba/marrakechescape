@@ -28,6 +28,21 @@
 
   include(variables::$root."/source/view/section/admin_header.php"); 
 
+// Last 30 days labels
+$last30DaysLabels = [];
+$last30DaysCounts = [];
+
+for ($i = 29; $i >= 0; $i--) {
+    $date = date("Y-m-d", strtotime("-$i days"));
+    $last30DaysLabels[] = date("M d", strtotime($date));
+
+    // COUNT bookings for this day
+    $b = new Bookings();
+    $count = $b->countByDate($date); // You must add this method (I can write it)
+    $last30DaysCounts[] = (int)$count;
+}
+
+
 ?>
 
       <div class="container-fluid pt-lg-5 pb-5">
@@ -38,66 +53,156 @@
 
           <div class="col-lg-12 mb-5">
             <i class="fa fa-calendar"></i> <?=date('l j F Y'); ?> - Semaine <?=date('W'); ?>
+<div class="container-fluid mt-4">
+
+  <!-- ===================== STAT BOXES ===================== -->
+  <div class="row">
+
+    <!-- Clients -->
+    <div class="col-md-4 col-lg-3 mb-4">
+      <div class="card shadow-sm border-0 stat-box">
+        <div class="card-body d-flex align-items-center">
+          <div class="stat-icon bg-primary text-white mr-3">
+            <i class="fa fa-users"></i>
+          </div>
+          <div>
+            <h6 class="text-muted mb-1">Clients</h6>
+            <h3 class="mb-0 font-weight-bold"><?php echo $total_clients ?? 0; ?></h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bookings -->
+    <div class="col-md-4 col-lg-3 mb-4">
+      <div class="card shadow-sm border-0 stat-box">
+        <div class="card-body d-flex align-items-center">
+          <div class="stat-icon bg-warning text-white mr-3">
+            <i class="fa fa-calendar-check"></i>
+          </div>
+          <div>
+            <h6 class="text-muted mb-1">Bookings</h6>
+            <h3 class="mb-0 font-weight-bold"><?php echo $total_bookings ?? 0; ?></h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Programs -->
+    <div class="col-md-4 col-lg-3 mb-4">
+      <div class="card shadow-sm border-0 stat-box">
+        <div class="card-body d-flex align-items-center">
+          <div class="stat-icon bg-success text-white mr-3">
+            <i class="fa fa-map"></i>
+          </div>
+          <div>
+            <h6 class="text-muted mb-1">Programs</h6>
+            <h3 class="mb-0 font-weight-bold"><?php echo $total_programs ?? 0; ?></h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Categories -->
+    <div class="col-md-4 col-lg-3 mb-4">
+      <div class="card shadow-sm border-0 stat-box">
+        <div class="card-body d-flex align-items-center">
+          <div class="stat-icon bg-danger text-white mr-3">
+            <i class="fa fa-tags"></i>
+          </div>
+          <div>
+            <h6 class="text-muted mb-1">Categories</h6>
+            <h3 class="mb-0 font-weight-bold"><?php echo $total_categories ?? 0; ?></h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ===================== BOOKINGS GRAPH ===================== -->
+  <div class="row mt-4">
+    <div class="col-lg-8">
+      <div class="card shadow-sm border-0">
+        <div class="card-header bg-white">
+          <strong><i class="fa fa-chart-line mr-2"></i>Bookings Last 30 Days</strong>
+        </div>
+        <div class="card-body">
+          <canvas id="bookingsChart" height="120"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+var ctx = document.getElementById('bookingsChart').getContext('2d');
+
+// Labels = last 30 days (PHP echoes JSON array)
+var chartLabels = <?php echo json_encode($last30DaysLabels); ?>;
+
+// Data = number of bookings each day
+var chartData = <?php echo json_encode($last30DaysCounts); ?>;
+
+new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: chartLabels,
+        datasets: [{
+            label: "Bookings",
+            data: chartData,
+            borderColor: "rgba(253, 126, 20, 0.9)",
+            backgroundColor: "rgba(253, 126, 20, 0.3)",
+            borderWidth: 3,
+            pointRadius: 4,
+            pointBackgroundColor: "rgba(253, 126, 20, 1)"
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+            yAxes: [{ ticks: { beginAtZero: true, precision: 0 } }]
+        }
+    }
+});
+</script>
+
+
+<!-- ===================== STYLES ===================== -->
+<style>
+.stat-box:hover { transform: translateY(-3px); transition: 0.2s ease; }
+.stat-icon {
+  width: 55px; height: 55px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px; border-radius: 6px;
+}
+</style>
+
+
+
+<!-- Extra styling -->
+<style>
+  .stat-box:hover {
+    transform: translateY(-3px);
+    transition: 0.2s ease;
+  }
+  .stat-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+  }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+
+
           </div>
 
-          <div class="col-lg-3 mb-5 d-none">
-            <div class="list-group">
-              <a href="#" class="list-group-item list-group-item-action list-group-item-light d-flex justify-content-between align-items-center">
-                devis en cours
-                <span class="badge badge-primary badge-pill">14</span>
-              </a>
-              <a href="#" class="list-group-item list-group-item-action list-group-item-light d-flex justify-content-between align-items-center">
-                devis echus
-                <span class="badge badge-danger badge-pill">2</span>
-              </a>
-              <a href="#" class="list-group-item list-group-item-action list-group-item-light d-flex justify-content-between align-items-center">
-                facture en cours
-                <span class="badge badge-primary badge-pill">1</span>
-              </a>
-              <a href="#" class="list-group-item list-group-item-action list-group-item-light d-flex justify-content-between align-items-center">
-                facture echues
-                <span class="badge badge-danger badge-pill">1</span>
-              </a>
-            </div>
-          </div>
-          
-          <div class="col-lg-4 d-none">
-            <i class="fa fa-file"></i> dernires documents utilises:
-            <table class="table table-striped table-hover table-bordered mt-3">
-              <thead>
-                <tr>
-                  <th></th>
-                  <th width="70%"></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
           
           <?php foreach ($home->tables as $key => $table) { ?>
           <?php if(!($_SESSION[variables::$prefix."role"] != "admin" and $table["Name"] == 'User')){ ?>

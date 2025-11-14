@@ -12,18 +12,10 @@
             <?php $fk_missing = false; ?>
               <div class="modal-body <?php if($fk_missing) echo 'd-none'; ?>">
                 <div class="form-group">
-                  <label for="first_name">First Name</label>
+                  <label for="full_name">Full Name</label>
                   <small></small>
                 
-                      <input type="text" class="form-control" id="first_name" name="first_name"  >
-                    
-              </div>
-                    
-                <div class="form-group">
-                  <label for="last_name">Last Name</label>
-                  <small></small>
-                
-                      <input type="text" class="form-control" id="last_name" name="last_name"  >
+                      <input type="text" class="form-control" id="full_name" name="full_name"  >
                     
               </div>
                     
@@ -41,6 +33,38 @@
                 
                       <input type="text" class="form-control" id="phone" name="phone"  >
                     
+              </div>
+                    
+                <div class="form-group">
+                  <label for="country">Country</label>
+                  <small></small>
+                
+                      <input type="text" class="form-control" id="country" name="country"  >
+                    
+              </div>
+                    
+                <div class="form-group">
+                  <label for="program">Program</label>
+                  <small></small>
+                
+                      <input type="text" class="form-control" id="program" name="program"  >
+                    
+              </div>
+                    
+                <div class="form-group">
+                  <label for="id_program">Program</label>
+                  <small></small>
+                
+                      <input type="text" class="form-control" id="id_program" name="id_program"  >
+                    
+              </div>
+                    
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <small></small>
+                
+                      <textarea class="form-control" rows="5" name="message" id="message"></textarea>
+                      
               </div>
                     
             </div>

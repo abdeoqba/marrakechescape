@@ -268,7 +268,7 @@
                 <div class="col-lg-8 order-lg-2">
                     <h3 class="fw-bold mb-3" style="color: var(--color-dark-blue);">Rooted in Local Expertise</h3>
                     <p class="lead text-secondary mb-4">
-                        Marrakech Escape was founded by local Moroccan travel experts with a deep passion for sharing the **authentic soul of their homeland**, beyond the tourist facade.
+                        Marrakech Escape was founded by local Moroccan travel experts with a deep passion for sharing the <b>authentic soul of their homeland</b>, beyond the tourist facade.
                     </p>
                     <p class="text-secondary">
                         We believe travel should be transformative. Our roots are in the vibrant community of Marrakech, and this connection allows us to craft experiences—not just tours—that are built on personal relationships, deep local knowledge, and an unwavering commitment to quality. We hand-select every guide, every riad, and every activity to ensure your journey is seamless, luxurious, and profoundly personal.
@@ -289,12 +289,12 @@
                 <div class="col-lg-8 order-lg-1">
                     <h3 class="fw-bold mb-3" style="color: var(--color-dark-blue);">Commitment to Sustainable Travel</h3>
                     <p class="text-secondary mb-4">
-                        We are dedicated to **sustainable travel practices** that benefit the environments and communities we visit. When you travel with us, you are supporting:
+                        We are dedicated to <b>sustainable travel practices</b> that benefit the environments and communities we visit. When you travel with us, you are supporting:
                     </p>
                     <ul class="list-unstyled">
-                        <li class="mb-3"><i class="fas fa-check-circle me-2" style="color: var(--color-light-orange);"></i> **Fair Local Wages:** Ensuring our guides, drivers, and partners are compensated fairly and generously.</li>
-                        <li class="mb-3"><i class="fas fa-check-circle me-2" style="color: var(--color-light-orange);"></i> **Cultural Preservation:** Promoting traditional arts and respecting local customs in every itinerary.</li>
-                        <li class="mb-3"><i class="fas fa-check-circle me-2" style="color: var(--color-light-orange);"></i> **Low-Impact Tourism:** Implementing eco-friendly measures, especially in the sensitive desert and mountain regions.</li>
+                        <li class="mb-3"><i class="fas fa-check-circle me-2" style="color: var(--color-light-orange);"></i> <b>Fair Local Wages:</b> Ensuring our guides, drivers, and partners are compensated fairly and generously.</li>
+                        <li class="mb-3"><i class="fas fa-check-circle me-2" style="color: var(--color-light-orange);"></i> <b>Cultural Preservation:</b> Promoting traditional arts and respecting local customs in every itinerary.</li>
+                        <li class="mb-3"><i class="fas fa-check-circle me-2" style="color: var(--color-light-orange);"></i> <b>Low-Impact Tourism:</b> Implementing eco-friendly measures, especially in the sensitive desert and mountain regions.</li>
                     </ul>
                     <a href="#contact" class="btn btn-sm btn-outline-secondary mt-3" style="color: var(--color-dark-blue); border-color: var(--color-dark-blue);">Learn More About Our Ethics</a>
                 </div>
@@ -540,19 +540,19 @@
                     <p class="text-center text-secondary mb-5">
                         Tell us about your dream Moroccan journey and one of our dedicated travel consultants will be in touch shortly to craft your personalized itinerary.
                     </p>
-                    <form class="contact-form">
+                    <form action="admin/client-add" method="post" class="contact-form">
                         <div class="row g-4">
                             <div class="col-md-6">
-                                <input type="text" class="form-control" placeholder="Your Name" required>
+                                <input type="text" name="full_name" class="form-control" placeholder="Your Name" required>
                             </div>
                             <div class="col-md-6">
-                                <input type="email" class="form-control" placeholder="Your Email Address" required>
+                                <input type="email" name="email" class="form-control" placeholder="Your Email Address" required>
                             </div>
                             <div class="col-12">
-                                <input type="text" class="form-control" placeholder="Tour Interest (e.g., Desert, Culture, Luxury)" required>
+                                <input type="text" name="program" class="form-control" placeholder="Tour Interest (e.g., Desert, Culture, Luxury)" required>
                             </div>
                             <div class="col-12">
-                                <textarea class="form-control" rows="5" placeholder="Your Message / Specific Requirements"></textarea>
+                                <textarea class="form-control" name="message" rows="5" placeholder="Your Message / Specific Requirements"></textarea>
                             </div>
                             <div class="col-12 text-center">
                                 <button type="submit" class="btn btn-cta mt-3">Send Inquiry</button>

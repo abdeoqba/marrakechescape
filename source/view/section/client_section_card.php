@@ -13,13 +13,8 @@
                     <a href="client-<?=$client->id_client; ?>">#<?=$client->id_client; ?></a>
                   </div>
                 <div class="list-group-item">
-                  <b>First Name</b>:
-                  <span id="first_name_<?=$client->id_client; ?>"><?= $client->first_name;  ?></span>
-                </div>
-                
-                <div class="list-group-item">
-                  <b>Last Name</b>:
-                  <span id="last_name_<?=$client->id_client; ?>"><?= $client->last_name;  ?></span>
+                  <b>Full Name</b>:
+                  <span id="full_name_<?=$client->id_client; ?>"><?= $client->full_name;  ?></span>
                 </div>
                 
                 <div class="list-group-item">
@@ -30,6 +25,26 @@
                 <div class="list-group-item">
                   <b>Phone</b>:
                   <span id="phone_<?=$client->id_client; ?>"><?= $client->phone;  ?></span>
+                </div>
+                
+                <div class="list-group-item">
+                  <b>Country</b>:
+                  <span id="country_<?=$client->id_client; ?>"><?= $client->country;  ?></span>
+                </div>
+                
+                <div class="list-group-item">
+                  <b>Program</b>:
+                  <span id="program_<?=$client->id_client; ?>"><?= $client->program;  ?></span>
+                </div>
+                
+                <div class="list-group-item">
+                  <b>Program</b>:
+                  <span id="id_program_<?=$client->id_client; ?>"><?= $client->id_program;  ?></span>
+                </div>
+                
+                <div class="list-group-item">
+                  <b>Message</b>:
+                  <span id="message_<?=$client->id_client; ?>"><?= $client->message;  ?></span>
                 </div>
                 <?php if($_SESSION[variables::$prefix."allow_edit"]){ ?>
               <div class="list-group-item p-0">

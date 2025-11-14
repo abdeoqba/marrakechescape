@@ -29,7 +29,7 @@
             color: var(--color-dark-blue);
             background-color: #fcfcfc;
             scroll-behavior: smooth;
-            padding-top: 80px; /* Space for fixed navbar */
+            padding-top: 68px; /* Space for fixed navbar */
         }
 
         /* --- Navbar Styles --- */
@@ -141,24 +141,24 @@
         <div class="container">
             <div class="terms-container">
                 <p>
-                    These Terms and Conditions (**"Terms"**) govern the contractual relationship between **Marrakech Escape** ("the Company," "we," "us," or "our") and the client (**"Client,"** "you," or "your") booking a private tour or travel service in Morocco. By booking a tour with us, you agree to be bound by these Terms.
+                    These Terms and Conditions (<b>"Terms"</b>) govern the contractual relationship between <b>Marrakech Escape</b> ("the Company," "we," "us," or "our") and the client (<b>"Client,"</b> "you," or "your") booking a private tour or travel service in Morocco. By booking a tour with us, you agree to be bound by these Terms.
                 </p>
 
                 <!-- Section 1: Booking & Confirmation -->
                 <h2 class="terms-title" id="booking-confirmation">1. Booking & Confirmation</h2>
                 <ol>
-                    <li>**Reservation:** All reservations are considered requests until confirmed in writing by the Company.</li>
-                    <li>**Deposit:** A non-refundable deposit, typically **30% of the total tour cost**, is required at the time of booking to secure your reservation and services (e.g., accommodation, transport).</li>
-                    <li>**Final Payment:** The remaining balance (**70% of the total cost**) is due no later than **30 days prior to the tour start date**. Failure to pay the balance by the due date may result in the automatic cancellation of your booking, with forfeiture of the deposit.</li>
-                    <li>**Last-Minute Bookings:** For bookings made less than 30 days before the start date, **full payment is required immediately** to confirm the tour.</li>
+                    <li><b>Reservation:</b> All reservations are considered requests until confirmed in writing by the Company.</li>
+                    <li><b>Deposit:</b> A non-refundable deposit, typically <b>30% of the total tour cost</b>, is required at the time of booking to secure your reservation and services (e.g., accommodation, transport).</li>
+                    <li><b>Final Payment:</b> The remaining balance (<b>70% of the total cost</b>) is due no later than <b>30 days prior to the tour start date</b>. Failure to pay the balance by the due date may result in the automatic cancellation of your booking, with forfeiture of the deposit.</li>
+                    <li><b>Last-Minute Bookings:</b> For bookings made less than 30 days before the start date, <b>full payment is required immediately</b> to confirm the tour.</li>
                 </ol>
 
                 <!-- Section 2: Pricing & Inclusions -->
                 <h2 class="terms-title" id="pricing-inclusions">2. Pricing & Inclusions</h2>
                 <ol>
-                    <li>**Price Validity:** Prices are quoted in USD or EUR and are valid only at the time of quotation. We reserve the right to modify prices before a booking is confirmed due to external factors like exchange rate fluctuations or supplier cost increases.</li>
-                    <li>**Included Services:** Unless otherwise specified in the personalized itinerary, our prices typically include private transportation, fuel, the services of an English-speaking driver/guide, accommodation, and specified meals (usually breakfast and dinner).</li>
-                    <li>**Excluded Services:** Prices exclude international airfare, travel insurance (mandatory), visa fees, optional activities, lunches, beverages, personal expenses, and tips/gratuities for the driver/guide.</li>
+                    <li><b>Price Validity:</b> Prices are quoted in USD or EUR and are valid only at the time of quotation. We reserve the right to modify prices before a booking is confirmed due to external factors like exchange rate fluctuations or supplier cost increases.</li>
+                    <li><b>Included Services:</b> Unless otherwise specified in the personalized itinerary, our prices typically include private transportation, fuel, the services of an English-speaking driver/guide, accommodation, and specified meals (usually breakfast and dinner).</li>
+                    <li><b>Excluded Services:</b> Prices exclude international airfare, travel insurance (mandatory), visa fees, optional activities, lunches, beverages, personal expenses, and tips/gratuities for the driver/guide.</li>
                 </ol>
 
                 <!-- Section 3: Cancellation & Refunds -->
@@ -167,14 +167,14 @@
                 <h4 class="mt-4" style="color: var(--color-blue-light);">3.1. Cancellation by the Client</h4>
                 <p>All cancellations must be received in writing (email). The cancellation penalty is calculated based on the date we receive your written notification:</p>
                 <ul class="list-unstyled">
-                    <li>**60+ Days Before Start Date:** Forfeiture of the **non-refundable deposit**.</li>
-                    <li>**30 to 59 Days Before Start Date:** **50% of the total tour cost** is non-refundable.</li>
-                    <li>**0 to 29 Days Before Start Date:** **100% of the total tour cost** is non-refundable.</li>
+                    <li><b>60+ Days Before Start Date:</b> Forfeiture of the <b>non-refundable deposit</b>.</li>
+                    <li><b>30 to 59 Days Before Start Date:</b> <b>50% of the total tour cost</b> is non-refundable.</li>
+                    <li><b>0 to 29 Days Before Start Date:</b> <b>100% of the total tour cost</b> is non-refundable.</li>
                 </ul>
 
                 <h4 class="mt-4" style="color: var(--color-blue-light);">3.2. Cancellation by Marrakech Escape</h4>
                 <p>
-                    We reserve the right to cancel a tour due to unforeseen circumstances, such as political instability or extreme weather conditions, or if the safety of our clients or staff is compromised. In such a rare event, the Company will offer an alternative date or a **full refund of all monies paid**.
+                    We reserve the right to cancel a tour due to unforeseen circumstances, such as political instability or extreme weather conditions, or if the safety of our clients or staff is compromised. In such a rare event, the Company will offer an alternative date or a <b>full refund of all monies paid</b>.
                 </p>
                 
                 <!-- Section 4: Travel Insurance & Liability -->
@@ -182,26 +182,26 @@
                 
                 <div class="highlight-box">
                     <i class="fas fa-exclamation-triangle me-2" style="color: var(--color-dark-orange);"></i>
-                    **MANDATORY TRAVEL INSURANCE:** It is a condition of booking that the Client has comprehensive travel insurance that covers cancellation, medical emergencies, emergency repatriation, and personal liability.
+                    <b>MANDATORY TRAVEL INSURANCE:</b> It is a condition of booking that the Client has comprehensive travel insurance that covers cancellation, medical emergencies, emergency repatriation, and personal liability.
                 </div>
 
                 <ol start="4">
-                    <li>**Client Responsibility:** The Client is responsible for obtaining all necessary travel documents, including passports, visas, and health certificates, and for ensuring their travel insurance is adequate.</li>
-                    <li>**Limitation of Liability:** The Company acts only as an agent for the client in relation to travel services (transportation, accommodation, etc.). We shall not be held liable for any injury, damage, loss, delay, or irregularity which may occur due to the negligence, fault, or acts of any third-party supplier.</li>
-                    <li>**Baggage:** We are not responsible for the loss, theft, or damage of personal belongings, including luggage.</li>
+                    <li><b>Client Responsibility:</b> The Client is responsible for obtaining all necessary travel documents, including passports, visas, and health certificates, and for ensuring their travel insurance is adequate.</li>
+                    <li><b>Limitation of Liability:</b> The Company acts only as an agent for the client in relation to travel services (transportation, accommodation, etc.). We shall not be held liable for any injury, damage, loss, delay, or irregularity which may occur due to the negligence, fault, or acts of any third-party supplier.</li>
+                    <li><b>Baggage:</b> We are not responsible for the loss, theft, or damage of personal belongings, including luggage.</li>
                 </ol>
 
                 <!-- Section 5: Amendments -->
                 <h2 class="terms-title" id="amendments">5. Amendments</h2>
                 <ol start="7">
-                    <li>**Amendments by Client:** We will try to accommodate reasonable changes requested by the Client after confirmation, subject to availability. Any changes made less than 30 days before the tour may incur a **$50 administration fee** per change, plus any charges levied by suppliers.</li>
-                    <li>**Amendments by Company:** While every effort is made to operate all tours as advertised, the Company reserves the right to make minor changes to the itinerary, accommodation, or transport if necessary (e.g., due to road closures, hotel overbooking). You will be notified of any significant changes immediately.</li>
+                    <li><b>Amendments by Client:</b> We will try to accommodate reasonable changes requested by the Client after confirmation, subject to availability. Any changes made less than 30 days before the tour may incur a <b>$50 administration fee</b> per change, plus any charges levied by suppliers.</li>
+                    <li><b>Amendments by Company:</b> While every effort is made to operate all tours as advertised, the Company reserves the right to make minor changes to the itinerary, accommodation, or transport if necessary (e.g., due to road closures, hotel overbooking). You will be notified of any significant changes immediately.</li>
                 </ol>
                 
                 <!-- Section 6: Jurisdiction -->
                 <h2 class="terms-title" id="jurisdiction">6. Governing Law</h2>
                 <p>
-                    This agreement and any dispute or claim arising out of or in connection with it shall be governed by and construed in accordance with the laws of the **Kingdom of Morocco**.
+                    This agreement and any dispute or claim arising out of or in connection with it shall be governed by and construed in accordance with the laws of the <b>Kingdom of Morocco</b>.
                 </p>
                 
             </div>

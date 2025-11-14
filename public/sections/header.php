@@ -17,7 +17,7 @@
                 <!-- Links updated from #anchors to clean URLs (e.g., /about, /program) -->
                 <li class="nav-item"><a class="nav-link" href="home">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="about">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="program">Programs</a></li>
+                <li class="nav-item"><a class="nav-link" href="category">Programs</a></li>
                 <li class="nav-item"><a class="nav-link" href="reviews">Reviews</a></li>
                 <li class="nav-item"><a class="nav-link" href="faq">FAQ</a></li>
                 <li class="nav-item"><a class="nav-link" href="contact">Contact</a></li>

@@ -17,7 +17,7 @@
     }
 
     .footer-desc {
-        color: #b0b0b0;
+        color: #fff;
         font-size: 0.85rem;
         line-height: 1.6;
     }
@@ -59,7 +59,7 @@
         margin-top: 40px;
     }
     .footer-bottom p {
-        color: #a0a0a0;
+        color: #fff;
         font-size: 0.8rem;
     }
 </style>
@@ -75,7 +75,7 @@
                     <img src="asset/image/marrakech-escape-logo-600.png" alt="Marrakech Escape" class="footer-logo-img">
                 </div>
                 <p class="footer-desc">
-                    Marrakech Escape crafts personalized private tours, blending **luxury, authenticity, and Moroccan hospitality** for unforgettable journeys across Morocco's deserts, mountains, and imperial cities.
+                    Marrakech Escape crafts personalized private tours, blending <b>luxury, authenticity, and Moroccan hospitality</b> for unforgettable journeys across Morocco's deserts, mountains, and imperial cities.
                 </p>
                 <div class="footer-social mt-4">
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -89,11 +89,11 @@
             <div class="col-lg-2 col-md-6 footer-links">
                 <h5 class="footer-title">Quick Links</h5>
                 <ul class="list-unstyled">
-                    <li><a href="/home">Home</a></li>
-                    <li><a href="/about">Our Story</a></li>
-                    <li><a href="/contact">Book Your Escape</a></li>
-                    <li><a href="/faq">Travel FAQ</a></li>
-                    <li><a href="/guides">Meet the Guides</a></li>
+                    <li><a href="home">Home</a></li>
+                    <li><a href="about">Our Story</a></li>
+                    <li><a href="contact">Book Your Escape</a></li>
+                    <li><a href="faq">Travel FAQ</a></li>
+                    <li><a href="home#guides">Meet the Guides</a></li>
                 </ul>
             </div>
 
@@ -101,11 +101,11 @@
             <div class="col-lg-3 col-md-6 footer-links">
                 <h5 class="footer-title">Explore Tours</h5>
                 <ul class="list-unstyled">
-                    <li><a href="/program">All Programs</a></li>
-                    <li><a href="/program_details">Sahara Desert</a></li>
-                    <li><a href="/program_details">Imperial Cities</a></li>
-                    <li><a href="/program_details">Atlas Mountains</a></li>
-                    <li><a href="/reviews">Client Reviews</a></li>
+                    <li><a href="category">All Programs</a></li>
+                    <li><a href="program?id_program=2">Sahara Desert</a></li>
+                    <li><a href="program?id_program=18">Quad in Palmeraie</a></li>
+                    <li><a href="program?id_program=16">Atlas Mountains</a></li>
+                    <li><a href="reviews">Client Reviews</a></li>
                 </ul>
             </div>
 
@@ -113,8 +113,8 @@
             <div class="col-lg-3 col-md-6 footer-links">
                 <h5 class="footer-title">Support & Legal</h5>
                 <ul class="list-unstyled mb-4">
-                    <li><a href="/policy">Privacy Policy</a></li>
-                    <li><a href="/terms">Terms & Conditions</a></li>
+                    <li><a href="policy">Privacy Policy</a></li>
+                    <li><a href="terms">Terms & Conditions</a></li>
                 </ul>
                 <h5 class="footer-title mb-3">Get In Touch</h5>
                 <p style="color: #e0e0e0;"><i class="fas fa-envelope me-2" style="color: var(--color-yellow);"></i> info@marrakeshescape.com</p>

@@ -38,10 +38,13 @@
                 <b>Deleted At</b>: <?= $client->deleted_at; ?><br>
               <?php } ?>
               <b>Client</b>: <?=$client->id_client; ?><br>
-              <b>First Name</b>: <?=$client->first_name; ?><br>
-              <b>Last Name</b>: <?=$client->last_name; ?><br>
+              <b>Full Name</b>: <?=$client->full_name; ?><br>
               <b>Email</b>: <?=$client->email; ?><br>
               <b>Phone</b>: <?=$client->phone; ?><br>
+              <b>Country</b>: <?=$client->country; ?><br>
+              <b>Program</b>: <?=$client->program; ?><br>
+              <b>Program</b>: <?=$client->id_program; ?><br>
+              <b>Message</b>: <?=$client->message; ?><br>
               
           </div>
         </div>

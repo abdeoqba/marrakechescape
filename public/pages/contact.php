@@ -29,7 +29,7 @@
             color: var(--color-dark-blue);
             background-color: #fcfcfc;
             scroll-behavior: smooth;
-            padding-top: 80px; /* Space for fixed navbar */
+            padding-top: 68px; /* Space for fixed navbar */
         }
 
         /* --- Navbar Styles (Copied from About Page) --- */
@@ -54,7 +54,7 @@
         /* --- Page Header Section (Adapted from About Page) --- */
         #page-header {
             min-height: 40vh; 
-            background: url('https://placehold.co/1920x600/057279/ffffff?text=Contact+Us+Riad+Door') center center/cover no-repeat;
+            background: url('public/assets/images/marrakech-escape-photo-373.jpg') center center/cover no-repeat;
             position: relative;
             display: flex;
             align-items: center;
@@ -202,7 +202,7 @@
                             <i class="fas fa-map-marker-alt" style="color: var(--color-yellow);"></i>
                             <div>
                                 <small class="text-white-50">Office Location</small><br>
-                                **Ait Ourir, Marrakech-Safi, Morocco**
+                                <b>Marrakech-Safi, Morocco</b>
                             </div>
                         </div>
                         
@@ -210,7 +210,7 @@
                             <i class="fas fa-phone" style="color: var(--color-yellow);"></i>
                             <div>
                                 <small class="text-white-50">Call/WhatsApp</small><br>
-                                **+212 661 23 45 67**
+                                <b>+212 661 23 45 67</b>
                             </div>
                         </div>
                         
@@ -218,7 +218,7 @@
                             <i class="fas fa-envelope" style="color: var(--color-yellow);"></i>
                             <div>
                                 <small class="text-white-50">Email Us</small><br>
-                                **info@marrakesches cape.com**
+                                <b>info@marrakechescape.com</b>
                             </div>
                         </div>
                         
@@ -233,32 +233,32 @@
                 <!-- Contact Form (Right Column) -->
                 <div class="col-lg-8">
                     <div class="contact-card">
-                        <form class="contact-form">
+                        <form action="admin/client-add" method="post" class="contact-form">
                             <div class="row g-4">
                                 <!-- Full Name -->
                                 <div class="col-md-6">
                                     <label for="fullName" class="form-label fw-bold">Full Name</label>
-                                    <input type="text" class="form-control" id="fullName" placeholder="Jane Doe" required>
+                                    <input type="text" class="form-control" id="fullName" name="full_name" placeholder="Jane Doe" required>
                                 </div>
                                 <!-- Email Address -->
                                 <div class="col-md-6">
                                     <label for="email" class="form-label fw-bold">Email Address</label>
-                                    <input type="email" class="form-control" id="email" placeholder="jane.doe@example.com" required>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="jane.doe@example.com" required>
                                 </div>
                                 <!-- Phone -->
                                 <div class="col-md-6">
                                     <label for="phone" class="form-label fw-bold">Phone Number</label>
-                                    <input type="tel" class="form-control" id="phone" placeholder="+44 20 7946 0543">
+                                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="+44 20 7946 0543">
                                 </div>
                                 <!-- Country -->
                                 <div class="col-md-6">
                                     <label for="country" class="form-label fw-bold">Your Country</label>
-                                    <input type="text" class="form-control" id="country" placeholder="United States" required>
+                                    <input type="text" class="form-control" id="country" name="country" placeholder="United States" required>
                                 </div>
                                 <!-- Program Dropdown -->
                                 <div class="col-12">
                                     <label for="program" class="form-label fw-bold">Interested Program</label>
-                                    <select class="form-select" id="program" required>
+                                    <select class="form-select" id="program" name="program" required>
                                         <option value="" selected disabled>Select a Tour or Inquiry Type</option>
                                         <option value="desert">Sahara Desert Expeditions</option>
                                         <option value="imperial">Imperial Cities Cultural Tour</option>
@@ -271,7 +271,7 @@
                                 <!-- Message Textarea -->
                                 <div class="col-12">
                                     <label for="message" class="form-label fw-bold">Your Message / Specific Requirements</label>
-                                    <textarea class="form-control" id="message" rows="5" placeholder="Tell us about your travel dates, group size, and any special requests." required></textarea>
+                                    <textarea class="form-control" id="message" name="message" rows="5" placeholder="Tell us about your travel dates, group size, and any special requests." required></textarea>
                                 </div>
                                 <!-- Submit Button -->
                                 <div class="col-12 text-center mt-5">

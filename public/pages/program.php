@@ -39,7 +39,7 @@
             color: var(--color-dark-blue);
             background-color: #fcfcfc;
             scroll-behavior: smooth;
-            padding-top: 80px; /* Space for fixed navbar */
+            padding-top: 68px; /* Space for fixed navbar */
         }
 
         /* --- Navbar Styles --- */
@@ -59,7 +59,7 @@
         /* --- Page Header Section --- */
         #page-header {
             min-height: 50vh;
-            background: url('https://placehold.co/1920x600/ff8b26/ffffff?text=Desert+Dunes+Hero') center center/cover no-repeat;
+            background: url('public/assets/images/marrakech-escape-photo-080.jpg') center center/cover no-repeat;
             position: relative;
             display: flex;
             align-items: center;
@@ -231,18 +231,18 @@
         <div class="header-content">
             <nav aria-label="breadcrumb" class="breadcrumb-custom mb-3">
                 <ol class="breadcrumb justify-content-center">
-                    <li class="breadcrumb-item"><a href="programs.html">Tour Programs</a></li>
+                    <li class="breadcrumb-item"><a href="category">Tour Programs</a></li>
                     <li class="breadcrumb-item active text-white" aria-current="page">Sahara Desert Expedition</li>
                 </ol>
             </nav>
-            <h1 class="display-1 fw-bold mb-3">Sahara Desert Expedition</h1>
+            <h1 class="display-1 fw-bold mb-3"><?= $program->content->title; ?></h1>
             <p class="lead mb-4 fw-light">
-                Venture to the heart of the Erg Chebbi dunes for camel trekking, authentic Berber camps, and stunning celestial views.
+                <?= $program->content->description; ?>
             </p>
         </div>
     </header>
 
-    <pre width="400px"><?= json_encode($program); ?></pre>
+    <!-- <pre width="400px"><?= json_encode($program); ?></pre> -->
 
     <!-- 2. Tour Overview, Key Facts & Pricing -->
     <section id="tour-overview" class="section-padding pt-5 pb-5">
@@ -252,7 +252,7 @@
                 <div class="col-lg-7">
                     <h2 class="fw-bold mb-4" style="color: var(--color-dark-orange);">Journey to the Sands</h2>
                     <p class="lead text-secondary">
-                        Our 4-day desert tour is designed to immerse you in the vast silence and ancient culture of the Moroccan Sahara. Starting from Marrakech, we cross the **High Atlas Mountains**, visit the UNESCO site of **Aït Benhaddou**, and spend two unforgettable nights under the stars in a luxury desert camp.
+                        Our 4-day desert tour is designed to immerse you in the vast silence and ancient culture of the Moroccan Sahara. Starting from Marrakech, we cross the <b>High Atlas Mountains</b>, visit the UNESCO site of <b>Aït Benhaddou</b>, and spend two unforgettable nights under the stars in a luxury desert camp.
                     </p>
                     <p class="text-secondary">
                         This is more than just a trip; it's a sensory experience where the scale of the dunes humbles you, and the hospitality of the Berber people warms you. Perfect for those seeking tranquility, adventure, and incredible photography opportunities.
@@ -275,11 +275,11 @@
                         
                         <div class="fact-item">
                             <i class="fas fa-clock"></i>
-                            <div class="flex-grow-1">Duration: <span class="fw-bold text-white">4 Days / 3 Nights</span></div>
+                            <div class="flex-grow-1">Duration: <span class="fw-bold text-white"><?= $program->nbr_days; ?> Days / 3 Nights</span></div>
                         </div>
                         <div class="fact-item">
                             <i class="fas fa-map-marker-alt"></i>
-                            <div class="flex-grow-1">Starts/Ends: <span class="fw-bold text-white">Marrakech</span></div>
+                            <div class="flex-grow-1">Starts/Ends: <span class="fw-bold text-white"><?= $program->start; ?><?= $program->end; ?></span></div>
                         </div>
                         <div class="fact-item">
                             <i class="fas fa-walking"></i>
@@ -291,9 +291,9 @@
                         </div>
                         
                         <div class="text-center mt-4 pt-3 border-top border-white-50">
-                            <div class="tour-price">From $599</div>
+                            <div class="tour-price">From $<?= $program->price; ?></div>
                             <small class="text-white-50">Per person, based on 4 travelers.</small>
-                            <a href="contact.html" class="btn btn-cta w-100 mt-3">Book This Tour</a>
+                            <a href="contact" class="btn btn-cta w-100 mt-3">Book This Tour</a>
                         </div>
                     </div>
                 </div>
@@ -319,7 +319,7 @@
                             </h2>
                             <div id="itineraryCollapse1" class="accordion-collapse collapse show" aria-labelledby="itineraryHeading1" data-bs-parent="#tourItinerary">
                                 <div class="accordion-body text-secondary">
-                                    We start early, crossing the magnificent **Tizi n'Tichka Pass** (2,260m) in the High Atlas Mountains. Stop for lunch near the legendary **Kasbah of Aït Benhaddou** (UNESCO World Heritage Site). The afternoon features scenic driving through the Valley of Roses before settling in a traditional riad in the Dades Gorges.
+                                    We start early, crossing the magnificent <b>Tizi n'Tichka Pass</b> (2,260m) in the High Atlas Mountains. Stop for lunch near the legendary <b>Kasbah of Aït Benhaddou</b> (UNESCO World Heritage Site). The afternoon features scenic driving through the Valley of Roses before settling in a traditional riad in the Dades Gorges.
                                 </div>
                             </div>
                         </div>
@@ -413,7 +413,7 @@
             <p class="lead text-white-50 mb-4">
                 This tour is fully customizable. Click below to inquire about dates, pricing for your group size, or to modify the itinerary.
             </p>
-            <a href="contact.html" class="btn btn-cta btn-lg">
+            <a href="contact" class="btn btn-cta btn-lg">
                 <i class="fas fa-paper-plane me-2"></i> Start My Desert Booking
             </a>
         </div>

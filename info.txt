@@ -1,0 +1,36 @@
+{
+  "id_program": 1,
+  "id_category": 1,
+  "id_image": 0,
+  "nbr_days": "2",
+  "start": "",
+  "end": "",
+  "price": 0,
+  "category": {
+    "id_category": 1,
+    "parent_id": 0,
+    "id_image": 0,
+    "category": null,
+    "image": null
+  },
+  "image": null,
+  "content": {
+    "id_program_translation": 1,
+    "id_program": 1,
+    "language": "en",
+    "title": "2 Days Zagora Desert Tour",
+    "description": "Shared group tour to Zagora desert with camel ride and camp",
+    "content": "",
+    "includes": "",
+    "excludes": "",
+    "highlights": "",
+    "program": null
+  },
+  "itinerary": {
+    "id_program_day": null,
+    "id_program": null,
+    "day_order": null,
+    "program": null,
+    "content": null
+  }
+}

@@ -46,63 +46,135 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarText">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="../" target="_blank">
-          <i class="fa fa-external-link-square"></i>
-          Website</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link <?php if($admin == 'home') echo 'active'; ?>" href="../admin/" >
-          <i class="fa fa-home"></i>
-          Dashboard</a>
-        </li><li class="nav-item">
-          <a class="nav-link <?php if($admin == 'post_comment') echo 'active'; ?>" href="post_comments">Post Comment</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link <?php if($admin == 'post_category_translation') echo 'active'; ?>" href="post_category_translations">Post Category Translation</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link <?php if($admin == 'post_category') echo 'active'; ?>" href="post_categorys">Post Category</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link <?php if($admin == 'post_translation') echo 'active'; ?>" href="post_translations">Post Translation</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link <?php if($admin == 'payments') echo 'active'; ?>" href="paymentss">Payments</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link <?php if($admin == 'bookings') echo 'active'; ?>" href="bookingss">Bookings</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link <?php if($admin == 'program_day_translation') echo 'active'; ?>" href="program_day_translations">Program Day Translation</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link <?php if($admin == 'program_translation') echo 'active'; ?>" href="program_translations">Program Translation</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link <?php if($admin == 'category_translation') echo 'active'; ?>" href="category_translations">Category Translation</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link <?php if($admin == 'image') echo 'active'; ?>" href="images">Image</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link <?php if($admin == 'post') echo 'active'; ?>" href="posts">Post</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link <?php if($admin == 'client') echo 'active'; ?>" href="clients">Client</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link <?php if($admin == 'program_day') echo 'active'; ?>" href="program_days">Program Day</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link <?php if($admin == 'category') echo 'active'; ?>" href="categorys">Category</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link <?php if($admin == 'program') echo 'active'; ?>" href="programs">Program</a>
-        </li>
-        
-      </ul>
+<ul class="navbar-nav mr-auto">
+
+  <!-- Website -->
+  <li class="nav-item">
+    <a class="nav-link" href="../" target="_blank">
+      <i class="fa fa-external-link-square"></i> Website
+    </a>
+  </li>
+
+  <li class="nav-item">
+    <a class="nav-link <?php if($admin=='home') echo 'active'; ?>" href="../admin/">
+      <i class="fa fa-home"></i> Dashboard
+    </a>
+  </li>
+
+
+  <!-- ===================== POSTS GROUP ===================== -->
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle 
+      <?php if(in_array($admin, ['post','post_translation','post_category','post_category_translation','post_comment'])) echo 'active'; ?>"
+      href="#" id="postDropdown" role="button" data-toggle="dropdown">
+      <i class="fa fa-newspaper"></i> Posts
+    </a>
+
+    <div class="dropdown-menu">
+
+      <a class="dropdown-item <?php if($admin=='post') echo 'active'; ?>" href="posts">
+        <i class="fa fa-file-alt mr-2"></i> Post
+      </a>
+
+      <a class="dropdown-item <?php if($admin=='post_translation') echo 'active'; ?>" href="post_translations">
+        <i class="fa fa-language mr-2"></i> Post Translation
+      </a>
+
+      <div class="dropdown-divider"></div>
+
+      <a class="dropdown-item <?php if($admin=='post_category') echo 'active'; ?>" href="post_categorys">
+        <i class="fa fa-folder mr-2"></i> Post Category
+      </a>
+
+      <a class="dropdown-item <?php if($admin=='post_category_translation') echo 'active'; ?>" href="post_category_translations">
+        <i class="fa fa-language mr-2"></i> Category Translation
+      </a>
+
+      <div class="dropdown-divider"></div>
+
+      <a class="dropdown-item <?php if($admin=='post_comment') echo 'active'; ?>" href="post_comments">
+        <i class="fa fa-comments mr-2"></i> Post Comments
+      </a>
+
+    </div>
+  </li>
+
+
+  <!-- ===================== PROGRAMS GROUP ===================== -->
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle 
+      <?php if(in_array($admin, ['program','program_translation','program_day','program_day_translation','category','category_translation'])) echo 'active'; ?>"
+      href="#" id="programDropdown" role="button" data-toggle="dropdown">
+      <i class="fa fa-map"></i> Programs
+    </a>
+
+    <div class="dropdown-menu">
+
+      <a class="dropdown-item <?php if($admin=='program') echo 'active'; ?>" href="programs">
+        <i class="fa fa-map-signs mr-2"></i> Program
+      </a>
+
+      <a class="dropdown-item <?php if($admin=='program_translation') echo 'active'; ?>" href="program_translations">
+        <i class="fa fa-language mr-2"></i> Program Translation
+      </a>
+
+      <div class="dropdown-divider"></div>
+
+      <a class="dropdown-item <?php if($admin=='program_day') echo 'active'; ?>" href="program_days">
+        <i class="far fa-calendar-check"></i> Program Day
+      </a>
+
+      <a class="dropdown-item <?php if($admin=='program_day_translation') echo 'active'; ?>" href="program_day_translations">
+        <i class="fa fa-language mr-2"></i> Day Translation
+      </a>
+
+      <div class="dropdown-divider"></div>
+
+      <a class="dropdown-item <?php if($admin=='category') echo 'active'; ?>" href="categorys">
+        <i class="fa fa-tags mr-2"></i> Category
+      </a>
+
+      <a class="dropdown-item <?php if($admin=='category_translation') echo 'active'; ?>" href="category_translations">
+        <i class="fa fa-language mr-2"></i> Category Translation
+      </a>
+
+    </div>
+  </li>
+
+
+  <!-- ===================== OPERATIONS GROUP ===================== -->
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle 
+      <?php if(in_array($admin, ['bookings','payments','client','image'])) echo 'active'; ?>"
+      href="#" role="button" data-toggle="dropdown">
+      <i class="fas fa-toolbox"></i> Operations
+    </a>
+
+    <div class="dropdown-menu">
+
+      <a class="dropdown-item <?php if($admin=='bookings') echo 'active'; ?>" href="bookingss">
+        <i class="fa fa-book mr-2"></i> Bookings
+      </a>
+
+      <a class="dropdown-item <?php if($admin=='payments') echo 'active'; ?>" href="paymentss">
+        <i class="fa fa-credit-card mr-2"></i> Payments
+      </a>
+
+      <div class="dropdown-divider"></div>
+
+      <a class="dropdown-item <?php if($admin=='client') echo 'active'; ?>" href="clients">
+        <i class="fa fa-user mr-2"></i> Clients
+      </a>
+
+      <a class="dropdown-item <?php if($admin=='image') echo 'active'; ?>" href="images">
+        <i class="fa fa-image mr-2"></i> Images
+      </a>
+
+    </div>
+  </li>
+
+</ul>
+
       
       <span class="navbar-text">
         

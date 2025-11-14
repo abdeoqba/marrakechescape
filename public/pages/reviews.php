@@ -29,7 +29,7 @@
             color: var(--color-dark-blue);
             background-color: #fcfcfc;
             scroll-behavior: smooth;
-            padding-top: 80px; /* Space for fixed navbar */
+            padding-top: 68px; /* Space for fixed navbar */
         }
 
         /* --- Navbar Styles --- */
@@ -310,7 +310,7 @@
             <p class="lead text-white-50 mb-4">
                 Join our family of happy travelers and let us custom-design your perfect escape.
             </p>
-            <a href="contact.html" class="btn btn-cta btn-lg">
+            <a href="contact" class="btn btn-cta btn-lg">
                 <i class="fas fa-paper-plane me-2"></i> Plan My Escape
             </a>
         </div>

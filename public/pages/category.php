@@ -1,3 +1,10 @@
+<?php 
+
+    include('../sections/init.php'); 
+
+    $program = new Program();
+    $program->getAllProgram(0); // Get all programs
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,7 +36,7 @@
             color: var(--color-dark-blue);
             background-color: #fcfcfc;
             scroll-behavior: smooth;
-            padding-top: 80px; /* Space for fixed navbar */
+            padding-top: 68px; /* Space for fixed navbar */
         }
 
         /* --- Navbar Styles --- */
@@ -53,7 +60,7 @@
         /* --- Page Header Section --- */
         #page-header {
             min-height: 40vh;
-            background: url('https://placehold.co/1920x600/057279/ffffff?text=Programs+Page+Banner') center center/cover no-repeat;
+            background: url('public/assets/images/marrakech-escape-photo-416.jpg') center center/cover no-repeat;
             position: relative;
             display: flex;
             align-items: center;
@@ -220,81 +227,34 @@
             
             <div class="row g-4 justify-content-center">
                 
-                <!-- Program Card 1: Sahara Desert Expeditions -->
-                <div class="col-lg-6 col-xl-4 d-flex">
-                    <div class="card program-card">
-                        <img src="https://placehold.co/800x600/ff8b26/ffffff?text=Sahara+Desert" alt="Camels walking across the Sahara dunes at sunset" class="card-img-top">
-                        <div class="card-body">
-                            <span class="badge rounded-pill text-bg-warning mb-2 fw-normal">4-7 Days</span>
-                            <h4>Sahara Desert Expeditions</h4>
-                            <p class="card-text text-secondary">Venture deep into the Erg Chebbi dunes for authentic Berber camp experiences, camel trekking, and unparalleled stargazing.</p>
-                            
-                            <div class="program-details">
-                                <span class="program-price">
-                                    $599 <small>/ per person</small>
-                                </span>
-                                <a href="contact.html" class="btn btn-cta">Inquire Now</a>
+                <?php if(!empty($program->programs)): ?>
+                    <?php foreach($program->programs as $tour): ?>
+                    <!-- Program Card: <?= htmlspecialchars($tour->content->title ?? 'Tour') ?> -->
+                    <div class="col-lg-6 col-xl-4">
+                        <div class="card program-card">
+                            <img src="<?= htmlspecialchars($tour->image->photo_file ?? 'https://placehold.co/800x600/ff8b26/ffffff?text=Tour') ?>" alt="<?= htmlspecialchars($tour->content->title ?? 'Tour Image') ?>" class="card-img-top">
+                            <div class="card-body">
+                                <span class="badge rounded-pill text-bg-warning mb-2 fw-normal"><?= htmlspecialchars($tour->nbr_days ?? '4') ?> Days</span>
+                                <h4><?= htmlspecialchars($tour->content->title ?? 'Moroccan Adventure') ?></h4>
+                                <p class="card-text text-secondary"><?= htmlspecialchars(substr($tour->content->description ?? 'Experience an unforgettable journey through Morocco.', 0, 120)) ?>...</p>
+                                
+                                <div class="program-details">
+                                    <span class="program-price">
+                                        $<?= number_format($tour->price ?? 599, 0) ?> <small>/ per person</small>
+                                    </span>
+                                    <a href="program?id_program=<?= $tour->id_program ?>" class="btn btn-cta">View Details</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <!-- Program Card 2: Imperial Cities Cultural Tour -->
-                <div class="col-lg-6 col-xl-4 d-flex">
-                    <div class="card program-card">
-                        <img src="https://placehold.co/800x600/057279/ffffff?text=Imperial+Cities" alt="Blue walls of Chefchaouen" class="card-img-top">
-                        <div class="card-body">
-                            <span class="badge rounded-pill text-bg-info mb-2 fw-normal">7-10 Days</span>
-                            <h4>Imperial Cities Grand Tour</h4>
-                            <p class="card-text text-secondary">Discover Morocco's rich history in Fez, Rabat, Meknes, and Marrakech, exploring ancient medinas and royal palaces.</p>
-
-                            <div class="program-details">
-                                <span class="program-price">
-                                    $1,250 <small>/ per person</small>
-                                </span>
-                                <a href="contact.html" class="btn btn-cta">Inquire Now</a>
-                            </div>
-                        </div>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                    <!-- Fallback: No programs found -->
+                    <div class="col-12 text-center py-5">
+                        <i class="fas fa-exclamation-circle fa-3x text-secondary mb-3"></i>
+                        <p class="lead text-secondary">No programs available at the moment. Please check back later!</p>
                     </div>
-                </div>
-
-                <!-- Program Card 3: Atlas Mountain Retreats -->
-                <div class="col-lg-6 col-xl-4 d-flex">
-                    <div class="card program-card">
-                        <img src="https://placehold.co/800x600/199fa8/ffffff?text=Atlas+Mountains" alt="Traditional Berber village in the Atlas Mountains" class="card-img-top">
-                        <div class="card-body">
-                            <span class="badge rounded-pill mb-2 fw-normal" style="background-color: var(--color-dark-orange); color: white;">3-5 Days</span>
-                            <h4>Atlas Mountain Retreats</h4>
-                            <p class="card-text text-secondary">Escape the heat with guided treks, stay in mountain lodges, and experience the simple beauty of Berber life in the high Atlas.</p>
-
-                            <div class="program-details">
-                                <span class="program-price">
-                                    $420 <small>/ per person</small>
-                                </span>
-                                <a href="contact.html" class="btn btn-cta">Inquire Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Program Card 4: Marrakech Culinary Journey (Half Width for a 4th Card in a 3-column grid) -->
-                <div class="col-lg-6 col-xl-4 d-flex">
-                    <div class="card program-card">
-                        <img src="https://placehold.co/800x600/d4421c/ffffff?text=Culinary+Marrakech" alt="Spices and Tagine cooking class in Marrakech" class="card-img-top">
-                        <div class="card-body">
-                            <span class="badge rounded-pill bg-success mb-2 fw-normal">2 Days</span>
-                            <h4>Marrakech Culinary Journey</h4>
-                            <p class="card-text text-secondary">Dive into the flavors of Morocco with guided market tours, spice workshops, and hands-on cooking classes for authentic cuisine.</p>
-
-                            <div class="program-details">
-                                <span class="program-price">
-                                    $299 <small>/ per person</small>
-                                </span>
-                                <a href="contact.html" class="btn btn-cta">Inquire Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <?php endif; ?>
                 
                 <!-- Custom Tour CTA -->
                 <div class="col-12 text-center mt-5">
@@ -302,7 +262,7 @@
                         <i class="fas fa-hand-sparkles me-2" style="color: var(--color-light-orange);"></i>
                         Don't see exactly what you need? We specialize in **100% custom-tailored private tours**.
                     </p>
-                    <a href="contact.html" class="btn btn-cta btn-lg mt-3">Design My Custom Tour</a>
+                    <a href="contact" class="btn btn-cta btn-lg mt-3">Design My Custom Tour</a>
                 </div>
 
             </div>

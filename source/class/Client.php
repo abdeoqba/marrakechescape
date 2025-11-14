@@ -5,10 +5,13 @@
         private $cn;
 
         public $id_client;
-        public $first_name;
-        public $last_name;
+        public $full_name;
         public $email;
         public $phone;
+        public $country;
+        public $program;
+        public $id_program;
+        public $message;
         
         public $clients = array();
         public $assoc_clients = array();
@@ -90,13 +93,19 @@
           
               $this->id_client = (isset($client["id_client"]) and !empty($client["id_client"]) )?$client["id_client"]:0;
           
-              $this->first_name = (isset($client["first_name"]))?trim($this->secure($client["first_name"])):"";
-          
-              $this->last_name = (isset($client["last_name"]))?trim($this->secure($client["last_name"])):"";
+              $this->full_name = (isset($client["full_name"]))?trim($this->secure($client["full_name"])):"";
           
               $this->email = (isset($client["email"]))?trim($this->secure($client["email"])):"";
           
               $this->phone = (isset($client["phone"]))?trim($this->secure($client["phone"])):"";
+          
+              $this->country = (isset($client["country"]))?trim($this->secure($client["country"])):"";
+          
+              $this->program = (isset($client["program"]))?trim($this->secure($client["program"])):"";
+          
+              $this->id_program = (isset($client["id_program"]) and !empty($client["id_program"]) )?$client["id_program"]:0;
+          
+              $this->message = (isset($client["message"]))?trim($this->secure($client["message"])):"";
           
         }
 
@@ -222,7 +231,9 @@
         public function add($client){
           $this->set($client);
           
-            $requete = "INSERT `client`(`first_name`,`last_name`,`email`,`phone`) values('$this->first_name','$this->last_name','$this->email','$this->phone');";
+              $this->message = nl2br($this->message);
+          
+            $requete = "INSERT `client`(`full_name`,`email`,`phone`,`country`,`program`,`id_program`,`message`) values('$this->full_name','$this->email','$this->phone','$this->country','$this->program',$this->id_program,'$this->message');";
 
           if(variables::$sql_query_debug)
             echo $requete;
@@ -233,7 +244,9 @@
         public function update($client){
           $this->set($client);
           
-          $requete = "UPDATE `client` SET `first_name` = '$this->first_name',`last_name` = '$this->last_name',`email` = '$this->email',`phone` = '$this->phone' WHERE `id_client` = $this->id_client";
+              $this->message = nl2br($client["message"]);
+          
+          $requete = "UPDATE `client` SET `full_name` = '$this->full_name',`email` = '$this->email',`phone` = '$this->phone',`country` = '$this->country',`program` = '$this->program',`id_program` = $this->id_program,`message` = '$this->message' WHERE `id_client` = $this->id_client";
 
           if(variables::$sql_query_debug)
             echo $requete;

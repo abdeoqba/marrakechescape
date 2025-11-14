@@ -31,7 +31,7 @@
             color: var(--color-dark-blue);
             background-color: #fcfcfc;
             scroll-behavior: smooth;
-            padding-top: 80px; /* Space for fixed navbar */
+            padding-top: 68px; /* Space for fixed navbar */
         }
 
         /* --- Navbar Styles (Copied from Homepage) --- */
@@ -51,7 +51,7 @@
         /* --- Page Header Section (Adapted from Hero) --- */
         #page-header {
             min-height: 40vh; /* Shorter than the full-screen hero */
-            background: url('https://placehold.co/1920x600/057279/ffffff?text=Atlas+Mountains+View+Header') center center/cover no-repeat;
+            background: url('public/assets/images/marrakech-escape-photo-503.jpg') center center/cover no-repeat;
             position: relative;
             display: flex;
             align-items: center;
@@ -185,7 +185,7 @@
                 <div class="col-lg-6">
                     <h3 class="fw-bold mb-3" style="color: var(--color-dark-blue);">The Essence of Moroccan Hospitality</h3>
                     <p class="lead text-secondary mb-4">
-                        Marrakech Escape was founded by local Moroccan travel experts with a deep passion for sharing the **authentic soul of their homeland**, beyond the tourist facade.
+                        Marrakech Escape was founded by local Moroccan travel experts with a deep passion for sharing the <b>authentic soul of their homeland</b>, beyond the tourist facade.
                     </p>
                     <p class="text-secondary">
                         We believe travel should be transformative. Our roots are in the vibrant community of Marrakech, and this connection allows us to craft experiences—not just tours—that are built on personal relationships, deep local knowledge, and an unwavering commitment to quality. We hand-select every guide, every riad, and every activity to ensure your journey is seamless, luxurious, and profoundly personal.
@@ -206,14 +206,14 @@
                 <div class="col-lg-6 order-lg-1">
                     <h3 class="fw-bold mb-3" style="color: var(--color-dark-blue);">Our Commitment to Sustainable Travel</h3>
                     <p class="text-secondary mb-4">
-                        We are dedicated to **sustainable travel practices** that benefit the environments and communities we visit. When you travel with us, you are supporting:
+                        We are dedicated to <b>sustainable travel practices</b> that benefit the environments and communities we visit. When you travel with us, you are supporting:
                     </p>
                     <ul class="list-unstyled">
-                        <li class="mb-3"><i class="fas fa-check-circle me-2" style="color: var(--color-light-orange);"></i> **Fair Local Wages:** Ensuring our guides, drivers, and partners are compensated fairly and generously.</li>
-                        <li class="mb-3"><i class="fas fa-check-circle me-2" style="color: var(--color-light-orange);"></i> **Cultural Preservation:** Promoting traditional arts and respecting local customs in every itinerary.</li>
-                        <li class="mb-3"><i class="fas fa-check-circle me-2" style="color: var(--color-light-orange);"></i> **Low-Impact Tourism:** Implementing eco-friendly measures, especially in the sensitive desert and mountain regions.</li>
+                        <li class="mb-3"><i class="fas fa-check-circle me-2" style="color: var(--color-light-orange);"></i> <b>Fair Local Wages:</b> Ensuring our guides, drivers, and partners are compensated fairly and generously.</li>
+                        <li class="mb-3"><i class="fas fa-check-circle me-2" style="color: var(--color-light-orange);"></i> <b>Cultural Preservation:</b> Promoting traditional arts and respecting local customs in every itinerary.</li>
+                        <li class="mb-3"><i class="fas fa-check-circle me-2" style="color: var(--color-light-orange);"></i> <b>Low-Impact Tourism:</b> Implementing eco-friendly measures, especially in the sensitive desert and mountain regions.</li>
                     </ul>
-                    <a href="marrakech_escape.html#contact" class="btn btn-cta mt-3">Plan a Responsible Trip</a>
+                    <a href="contact" class="btn btn-cta mt-3">Plan a Responsible Trip</a>
                 </div>
             </div>
         </div>

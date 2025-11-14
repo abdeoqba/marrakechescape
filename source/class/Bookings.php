@@ -372,6 +372,12 @@
           return str_replace("'","’",$string);
         }
 
+        public function countByDate($date)
+        { 
+            $result = $this->cn->requete("SELECT COUNT(*) FROM bookings WHERE DATE(created_at) = '$date'");
+            return $result->fetchColumn();
+        }
+
       }
 
     ?>

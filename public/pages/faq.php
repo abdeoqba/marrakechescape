@@ -29,7 +29,7 @@
             color: var(--color-dark-blue);
             background-color: #fcfcfc;
             scroll-behavior: smooth;
-            padding-top: 80px; /* Space for fixed navbar */
+            padding-top: 68px; /* Space for fixed navbar */
         }
 
         /* --- Navbar Styles --- */
@@ -53,7 +53,7 @@
         /* --- Page Header Section --- */
         #page-header {
             min-height: 40vh;
-            background: url('https://placehold.co/1920x600/199fa8/ffffff?text=FAQ+Banner') center center/cover no-repeat;
+            background: url('public/assets/images/marrakech-escape-photo-980.jpg') center center/cover no-repeat;
             position: relative;
             display: flex;
             align-items: center;
@@ -197,7 +197,7 @@
                             </h2>
                             <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionBooking">
                                 <div class="accordion-body">
-                                    Booking is simple! Start by visiting our <a href="programs.html" style="color: var(--color-dark-orange); font-weight: 600;">Programs page</a> to explore our options. Once you have an idea, use the <a href="contact.html" style="color: var(--color-dark-orange); font-weight: 600;">Contact form</a> to send us your desired dates and group size. We will then design a personalized itinerary and discuss pricing and deposit details directly with you.
+                                    Booking is simple! Start by visiting our <a href="category" style="color: var(--color-dark-orange); font-weight: 600;">Programs page</a> to explore our options. Once you have an idea, use the <a href="contact" style="color: var(--color-dark-orange); font-weight: 600;">Contact form</a> to send us your desired dates and group size. We will then design a personalized itinerary and discuss pricing and deposit details directly with you.
                                 </div>
                             </div>
                         </div>
@@ -309,7 +309,7 @@
                     <!-- Final CTA for unanswered questions -->
                     <div class="text-center mt-5 pt-4">
                         <p class="lead">Didn't find your answer? Our team is ready to assist you directly!</p>
-                        <a href="contact.html" class="btn btn-lg fw-bold" style="background-color: var(--color-dark-orange); color: white; border-radius: 50px;">
+                        <a href="contact" class="btn btn-lg fw-bold" style="background-color: var(--color-dark-orange); color: white; border-radius: 50px;">
                             <i class="fas fa-headset me-2"></i> Contact Our Specialists
                         </a>
                     </div>

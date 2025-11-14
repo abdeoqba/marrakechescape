@@ -29,7 +29,7 @@
             color: var(--color-dark-blue);
             background-color: #fcfcfc;
             scroll-behavior: smooth;
-            padding-top: 80px; /* Space for fixed navbar */
+            padding-top: 68px; /* Space for fixed navbar */
         }
 
         /* --- Navbar Styles --- */
@@ -146,7 +146,7 @@
         <div class="container">
             <div class="policy-container">
                 <p>
-                    **Marrakech Escape** ("we," "us," or "our") is committed to protecting the privacy of our clients and website visitors. This policy explains how we collect, use, disclose, and safeguard your information when you visit our website or book one of our private tours.
+                    <b>Marrakech Escape</b> ("we," "us," or "our") is committed to protecting the privacy of our clients and website visitors. This policy explains how we collect, use, disclose, and safeguard your information when you visit our website or book one of our private tours.
                 </p>
 
                 <!-- Section 1: Information We Collect -->
@@ -168,18 +168,18 @@
                 <h2 class="policy-title" id="data-usage"><i class="fas fa-chart-line me-2"></i> 2. How We Use Your Data</h2>
                 <p>The data we collect is used solely for the following purposes:</p>
                 <ol>
-                    <li>**Service Fulfillment:** To process your booking, customize your itinerary, secure accommodation, and arrange transportation and guiding services.</li>
-                    <li>**Communication:** To respond to your inquiries via the Contact Form and send necessary updates regarding your booked tour.</li>
-                    <li>**Safety and Security:** To comply with local Moroccan laws and regulations, and to maintain the safety of all travelers.</li>
-                    <li>**Marketing (Consent-Based):** To send you occasional promotional emails about new tours or special offers, but only if you have explicitly opted-in.</li>
+                    <li><b>Service Fulfillment:</b> To process your booking, customize your itinerary, secure accommodation, and arrange transportation and guiding services.</li>
+                    <li><b>Communication:</b> To respond to your inquiries via the Contact Form and send necessary updates regarding your booked tour.</li>
+                    <li><b>Safety and Security:</b> To comply with local Moroccan laws and regulations, and to maintain the safety of all travelers.</li>
+                    <li><b>Marketing (Consent-Based):</b> To send you occasional promotional emails about new tours or special offers, but only if you have explicitly opted-in.</li>
                 </ol>
                 
                 <!-- Section 3: Data Sharing and Disclosure -->
                 <h2 class="policy-title" id="data-sharing"><i class="fas fa-share-alt me-2"></i> 3. Data Sharing and Disclosure</h2>
                 <p>We do not sell, trade, or rent your Personal Identification Data to outside parties. We only share your data as follows:</p>
                 <ul class="list-unstyled data-list">
-                    <li><i class="fas fa-hotel me-2" style="color: var(--color-dark-orange);"></i> **With Service Providers:** We must share necessary information (like name and passport details) with trusted third-party suppliers, such as hotels, riads, and local transportation partners, strictly for the purpose of fulfilling your booked itinerary.</li>
-                    <li><i class="fas fa-gavel me-2" style="color: var(--color-dark-orange);"></i> **For Legal Compliance:** We may disclose your data where required by law, such as in response to a court order or government request.</li>
+                    <li><i class="fas fa-hotel me-2" style="color: var(--color-dark-orange);"></i> <b>With Service Providers:</b> We must share necessary information (like name and passport details) with trusted third-party suppliers, such as hotels, riads, and local transportation partners, strictly for the purpose of fulfilling your booked itinerary.</li>
+                    <li><i class="fas fa-gavel me-2" style="color: var(--color-dark-orange);"></i> <b>For Legal Compliance:</b> We may disclose your data where required by law, such as in response to a court order or government request.</li>
                 </ul>
 
                 <!-- Section 4: Data Security -->
@@ -190,16 +190,16 @@
 
                 <div class="highlight-box">
                     <i class="fas fa-info-circle me-2" style="color: var(--color-blue-light);"></i>
-                    **Please Note:** While we strive to use commercially acceptable means to protect your data, no method of transmission over the Internet or method of electronic storage is 100% secure.
+                    <b>Please Note:</b> While we strive to use commercially acceptable means to protect your data, no method of transmission over the Internet or method of electronic storage is 100% secure.
                 </div>
 
                 <!-- Section 5: Your Data Rights -->
                 <h2 class="policy-title" id="your-rights"><i class="fas fa-user-shield me-2"></i> 5. Your Data Rights</h2>
                 <p>You have the right to:</p>
                 <ul class="list-unstyled">
-                    <li><i class="fas fa-eye me-2" style="color: var(--color-dark-blue);"></i> **Access:** Request copies of your personal data we hold.</li>
-                    <li><i class="fas fa-edit me-2" style="color: var(--color-dark-blue);"></i> **Correction:** Request that we correct any information you believe is inaccurate or incomplete.</li>
-                    <li><i class="fas fa-trash-alt me-2" style="color: var(--color-dark-blue);"></i> **Erasure:** Request that we erase your personal data, subject to legal retention requirements related to your booking.</li>
+                    <li><i class="fas fa-eye me-2" style="color: var(--color-dark-blue);"></i> <b>Access:</b> Request copies of your personal data we hold.</li>
+                    <li><i class="fas fa-edit me-2" style="color: var(--color-dark-blue);"></i> <b>Correction:</b> Request that we correct any information you believe is inaccurate or incomplete.</li>
+                    <li><i class="fas fa-trash-alt me-2" style="color: var(--color-dark-blue);"></i> <b>Erasure:</b> Request that we erase your personal data, subject to legal retention requirements related to your booking.</li>
                 </ul>
                 <p>To exercise any of these rights, please contact us using the details provided below.</p>
 
@@ -213,8 +213,8 @@
                 <h2 class="terms-title" id="contact"><i class="fas fa-headset me-2"></i> 7. Contact Us</h2>
                 <p>If you have any questions about this Privacy Policy, please contact us:</p>
                 <ul class="list-unstyled data-list">
-                    <li>**Email:** <a href="mailto:privacy@marrakeshescape.com" style="color: var(--color-dark-orange);">privacy@marrakeshescape.com</a></li>
-                    <li>**Via Contact Form:** <a href="contact.html" style="color: var(--color-dark-orange);">Visit our Contact Page</a></li>
+                    <li><b>Email:</b> <a href="mailto:info@marrakeshescape.com" style="color: var(--color-dark-orange);">privacy@marrakeshescape.com</a></li>
+                    <li><b>Via Contact Form:</b> <a href="contact" style="color: var(--color-dark-orange);">Visit our Contact Page</a></li>
                 </ul>
                 
             </div>
